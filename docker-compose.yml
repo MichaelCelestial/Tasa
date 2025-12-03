@@ -24,7 +24,7 @@ services:
 
   frontend:
     build:
-      context: ./frontend
+      context: ./Web
     environment:
       - NEXT_PUBLIC_API_URL=https://193.168.48.68/api 
     networks:
