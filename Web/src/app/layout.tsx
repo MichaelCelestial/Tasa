@@ -81,8 +81,6 @@ export const metadata: Metadata = {
     telephone: false,
   },
 
-  manifest: "/site.webmanifest",
-
   icons: {
     icon: "/public/favicon.ico",
     shortcut: "/public/favicon.ico",

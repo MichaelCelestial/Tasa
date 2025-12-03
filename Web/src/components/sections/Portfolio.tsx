@@ -2,49 +2,53 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { ExternalLink, Globe, Share2, Target } from "lucide-react";
+import { Bot, ExternalLink, Globe, Globe2, Joystick, Lock, PersonStanding, Share2, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
   {
     id: 1,
-    title: "TechStart",
-    category: "IT-стартап",
+    title: "AploCoin",
+    category: "IT-криптостартап",
     description:
-      "Разработка сайта и комплексное digital-продвижение для технологического стартапа",
-    results: "+340% заявок за 3 месяца",
-    services: ["Сайт", "SMM", "Контекст"],
+      "Разработка сайта и полное SEO продвижение",
+    results: "+240% заявок за 3 месяца",
+    services: ["Сайт", "SEO", "SMM", "Таргет"],
     gradient: "from-blue-600 to-purple-600",
+    link: "https://aplocoin.com",
   },
   {
     id: 2,
-    title: "GreenFood",
-    category: "Доставка еды",
+    title: "Blog ANT-Logistics",
+    category: "Онлайн-Блог",
     description:
-      "Интернет-магазин с интеграцией CRM и performance-маркетинг для сервиса доставки",
-    results: "2x рост продаж",
-    services: ["E-commerce", "Контекст"],
+      "Онлайн-блог для логистической компании с SEO и постоянной поддержкой",
+    results: "Обеспечили заботу о клиентах компании",
+    services: ["Сайт", "Блог", "SEO", "Поддержка", "SMM"],
     gradient: "from-green-600 to-teal-600",
+    link: "https://ua-blog.ant-logistics.com/",
   },
   {
     id: 3,
-    title: "LuxHome",
-    category: "Недвижимость",
+    title: "DogiDog",
+    category: "Крипто-Игра в Telegram",
     description:
-      "Премиальный сайт и SMM-продвижение для агентства элитной недвижимости",
-    results: "150+ лидов/мес",
-    services: ["Сайт", "SMM"],
+      "Крипто-игра прямо в Telegram с интеграцией NFT (было разработано совместно с партнером)",
+    results: "10000+ игроков",
+    services: ["Бот", "Игра", "NFT", "Поддержка"],
+    link: "https://t.me/DogiDogTap_bot",
     gradient: "from-amber-600 to-orange-600",
   },
   {
     id: 4,
-    title: "FitLife",
-    category: "Фитнес",
+    title: "InterFuse agency",
+    category: "Лендинг для маркетингового агентства",
     description:
-      "Лендинг и таргетированная реклама для сети фитнес-студий",
-    results: "-60% стоимость лида",
-    services: ["Лендинг", "Таргет"],
+      "Лендинг для маркетингового агентства-партнёра с акцентом на генерацию лидов",
+    results: "+200 лидов за 2 месяца",
+    services: ["Сайт", "Лендинг", "Контекст", "SMM"],
     gradient: "from-pink-600 to-red-600",
+    link: "https://interfuse.agency/",
   },
 ];
 
@@ -52,9 +56,13 @@ const serviceIcons: Record<string, typeof Globe> = {
   Сайт: Globe,
   "E-commerce": Globe,
   Лендинг: Globe,
+  NFT: Lock,
   SMM: Share2,
   Таргет: Share2,
   Контекст: Target,
+  Поддержка: PersonStanding,
+  Игра: Joystick,
+  Бот: Bot
 };
 
 export function Portfolio() {
@@ -122,7 +130,7 @@ export function Portfolio() {
                         data-testid={`button-view-project-${index}`}
                       >
                         <ExternalLink size={16} className="mr-2" />
-                        Смотреть кейс
+                        <motion.a href={project.link} target="_blank" rel="noopener noreferrer">Смотреть кейс</motion.a>
                       </Button>
                     </motion.div>
                   )}
