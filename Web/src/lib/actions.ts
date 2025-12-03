@@ -1,5 +1,3 @@
-"use server";
-
 export async function submitForm(formData: any) {
   try {
     const response = await fetch(
