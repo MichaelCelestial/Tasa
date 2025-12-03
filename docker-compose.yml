@@ -1,0 +1,29 @@
+version: "3.9"
+
+networks:
+  tsa:
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - './nginx.conf:/etc/nginx/nginx.conf'
+    networks:
+      - tsa
+    depends_on:
+      - backend
+      - frontend
+  
+  backend:
+    build:
+      context: ./Back
+    networks:
+      - tsa
+
+  frontend:
+    build:
+      context: ./Web
+    networks:
+      - tsa
