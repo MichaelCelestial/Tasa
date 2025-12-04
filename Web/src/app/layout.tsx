@@ -82,8 +82,8 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/public/favicon.ico",
-    shortcut: "/public/favicon.ico",
+    icon: "../../public/favicon.ico",
+    shortcut: "../../public/favicon.ico",
   },
 };
 
@@ -298,7 +298,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
-        <link rel="icon" href="/public/favicon.ico" />
+        <link rel="icon" href="../../public/favicon.ico" />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}

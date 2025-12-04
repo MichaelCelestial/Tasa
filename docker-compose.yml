@@ -26,6 +26,6 @@ services:
     build:
       context: ./Web
     environment:
-      - NEXT_PUBLIC_API_URL=https://193.168.48.68/api 
+      - NEXT_PUBLIC_API_URL=http://193.168.48.68/api 
     networks:
       - tsa
