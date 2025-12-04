@@ -158,11 +158,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@digitalstudio.ru"
+                  href="mailto:manager@tsebulenko-agency.ru"
                   className="hover:text-primary transition-colors"
                   data-testid="link-footer-email"
                 >
-                  hello@digitalstudio.ru
+                  manager@tsebulenko-agency.ru
                 </a>
               </li>
               <li>Москва, ул. Примерная, 1</li>

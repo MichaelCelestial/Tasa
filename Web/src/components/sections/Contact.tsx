@@ -32,8 +32,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@digitalstudio.ru",
-    href: "mailto:hello@digitalstudio.ru",
+    value: "manager@tsebulenko-agency.ru",
+    href: "mailto:manager@tsebulenko-agency.ru",
   },
   {
     icon: TelegramIcon,
