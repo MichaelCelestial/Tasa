@@ -116,7 +116,7 @@ function LocalBusinessSchema() {
 
     sameAs: [
       "https://www.instagram.com/tsebulenko_agency",
-      "https://www.vk.com/@tsebulenko_agency",
+      "https://www.vk.com/tsebulenko_agency",
       "https://t.me/tsebulenko_agency",
     ],
 
@@ -134,7 +134,6 @@ function LocalBusinessSchema() {
         "Thursday",
         "Friday",
         "Saturday",
-        "Sunday",
       ],
       opens: "10:00",
       closes: "20:00",
@@ -256,7 +255,7 @@ function OrganizationSchema() {
     },
     sameAs: [
       "https://www.instagram.com/tsebulenko_agency",
-      "https://www.vk.com/@tsebulenko_agency",
+      "https://www.vk.com/tsebulenko_agency",
       "https://t.me/tsebulenko_agency",
     ],
   };

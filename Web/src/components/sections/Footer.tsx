@@ -42,7 +42,7 @@ const socialLinks = [
     label: "Telegram",
     icon: TelegramIcon,
   },
-  { href: "https://vk.com/", label: "VK", icon: VKIcon },
+  { href: "https://vk.com/tsebulenko_agency", label: "VK", icon: VKIcon },
   {
     href: "https://www.instagram.com/tsebulenko_agency",
     label: "Instagram",
@@ -104,6 +104,9 @@ export function Footer() {
                 );
               })}
             </div>
+            <p className="text-white/60 leading-relaxed mt-4">
+              * Meta и Instagram - запрещены в РФ.
+            </p>
           </div>
 
           <div>
@@ -149,11 +152,11 @@ export function Footer() {
             <ul className="space-y-4 text-white/60">
               <li>
                 <a
-                  href="tel:+79991234567"
+                  href="https://t.me/tsebulenko_agency_manager"
                   className="hover:text-primary transition-colors"
-                  data-testid="link-footer-phone"
+                  data-testid="link-footer-tg"
                 >
-                  +7 (949) 489-02-40
+                  @tsebulenko_agency_manager
                 </a>
               </li>
               <li>
@@ -165,8 +168,8 @@ export function Footer() {
                   manager@tsebulenko-agency.ru
                 </a>
               </li>
-              <li>Москва, ул. Примерная, 1</li>
-              <li className="text-sm">Пн-Пт: 10:00 - 20:00</li>
+              <li>Донецкая область, г. Донецк</li>
+              <li className="text-sm">Пн-Сб: 10:00 - 20:00</li>
             </ul>
           </div>
         </div>
@@ -177,10 +180,10 @@ export function Footer() {
               © 2026 Tsebulenko Agency. Все права защищены.
             </p>
             <div className="flex items-center gap-6 text-sm text-white/40">
-              <a href="#" className="hover:text-white/60 transition-colors">
+              <a href="http://tsebulenko-agency.ru/privacy-policy.pdf" className="hover:text-white/60 transition-colors">
                 Политика конфиденциальности
               </a>
-              <a href="#" className="hover:text-white/60 transition-colors">
+              <a href="http://tsebulenko-agency.ru/public-offer.pdf" className="hover:text-white/60 transition-colors">
                 Оферта
               </a>
             </div>
