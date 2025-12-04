@@ -33,14 +33,18 @@ services:
   backend:
     build:
       context: ./Back
+    expose:
+      - "8080"  # Expose для internal network
     networks:
       - tsa
 
   frontend:
     build:
       context: ./Web
+    expose:
+      - "5000"  # Expose для internal network
     environment:
-      - NEXT_PUBLIC_API_URL=http://193.168.48.68/api 
+      - NEXT_PUBLIC_API_URL=https://tsebulenko-agency.ru/api  # HTTPS теперь!
     networks:
       - tsa
       
