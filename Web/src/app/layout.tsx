@@ -8,7 +8,6 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
-// ✅ Отдельный viewport export
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -20,12 +19,19 @@ export const viewport: Viewport = {
   colorScheme: "light",
 };
 
-// ✅ Metadata БЕЗ viewport полей
 export const metadata: Metadata = {
-  title: "TSA (ТСА) | Диджитал Агентство Донецк | Сайты, SMM, Контекст, Таргет",
-
+  title: "Диджитал Агентство Донецк | Сайты, SMM, Таргет | ТСА",
   description:
-    "Комплексные диджитал услуги в Донецке от агентства ТСА: разработка сайтов, SMM, контекстная реклама, таргет, Яндекс Директ. Основатель Цыбуленко (Tsebulenko).",
+    "ТСА — полный цикл digital услуг в Донецке. Разработка сайтов на Next.js, SMM, таргет, Яндекс Директ. Получите бесплатный аудит за 10 минут.",
+
+  robots:
+    "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  alternates: {
+    canonical: "https://tsebulenko-agency.ru",
+  },
+  formatDetection: {
+    telephone: false,
+  },
 
   keywords: [
     "сайты в донецке",
@@ -52,38 +58,40 @@ export const metadata: Metadata = {
     "интернет маркетинг донецк",
   ].join(", "),
 
+  icons: {
+    icon: [{ url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" }],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "256x256", type: "image/jpg" },
+    ],
+    other: [{ rel: "manifest", url: "/site.webmanifest" }],
+  },
+
   openGraph: {
     type: "website",
     locale: "ru_RU",
     url: "https://tsebulenko-agency.ru",
-    title: "TSA (ТСА) | Диджитал Агентство Донецк",
-    description: "Сайты, SMM, контекст, таргет, директ — всё в одном месте",
     siteName: "TSA",
+    title: "TSA | Диджитал Агентство Донецк",
+    description:
+      "Разработка сайтов, SMM, таргет, контекст. Реальные результаты: +300% трафика",
     images: [
       {
-        url: "https://tsebulenko-agency.ru/logo.jpg",
+        url: "https://tsebulenko-agency.ru/og-main.jpg",
         width: 1200,
         height: 630,
         alt: "TSA - Диджитал Агентство Донецк",
         type: "image/jpeg",
+        secureUrl: "https://tsebulenko-agency.ru/og-main.jpg",
       },
     ],
   },
 
-  robots:
-    "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-
-  alternates: {
-    canonical: "https://tsebulenko-agency.ru",
-  },
-
-  formatDetection: {
-    telephone: false,
-  },
-
-  icons: {
-    icon: "../../public/favicon.ico",
-    shortcut: "../../public/favicon.ico",
+  twitter: {
+    card: "summary_large_image",
+    title: "TSA | Диджитал Агентство",
+    description: "Полный цикл digital услуг в Донецке",
+    images: ["https://tsebulenko-agency.ru/og-main.jpg"],
   },
 };
 
@@ -92,18 +100,24 @@ function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://tsebulenko-agency.ru",
-    name: "TSA | ТСА - Диджитал Агентство Донецк",
+    name: "TSA | ТСА - Диджитал-Агентство Донецк",
+    alternateName: "Tsebulenko Agency",
     image: "https://tsebulenko-agency.ru/logo.jpg",
+    logo: "https://tsebulenko-agency.ru/logo.jpg",
+    description:
+      "Комплексные диджитал решения для продвижения бизнеса. Разработка сайтов, SMM, таргет, контекст, Яндекс Директ.",
 
     founder: {
       "@type": "Person",
       name: "Цыбуленко",
       alternateName: "Tsebulenko",
+      jobTitle: "Founder & CEO",
+      url: "https://tsebulenko-agency.ru",
     },
 
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Ваш адрес в Донецке",
+      streetAddress: "ул. Артёма, д. 45",
       addressLocality: "Донецк",
       addressRegion: "Донецкая область",
       postalCode: "83000",
@@ -111,7 +125,7 @@ function LocalBusinessSchema() {
     },
 
     telephone: "+7-949-489-02-40",
-    email: "tsebulenko-agency.ru@gmail.com",
+    email: "manager@tsebulenko-agency.ru",
     url: "https://tsebulenko-agency.ru",
 
     sameAs: [
@@ -120,10 +134,16 @@ function LocalBusinessSchema() {
       "https://t.me/tsebulenko_agency",
     ],
 
-    areaServed: {
-      "@type": "City",
-      name: "Донецк",
-    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Донецк",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Донецкая область",
+      },
+    ],
 
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
@@ -140,8 +160,15 @@ function LocalBusinessSchema() {
     },
 
     priceRange: "$$",
-    description:
-      "Комплексные диджитал решения для продвижения бизнеса в Донецке",
+
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Customer Support",
+      telephone: "+7-949-489-02-40",
+      email: "manager@tsebulenko-agency.ru",
+      areaServed: "RU",
+      availableLanguage: "ru",
+    },
   };
 
   return (
@@ -156,77 +183,156 @@ function ServiceSchema() {
   const services = [
     {
       "@type": "Service",
-      name: "Дизайн сайтов в Донецке",
-      description: "Профессиональный веб-дизайн и UX/UI для вашего бизнеса",
+      "@id": "https://tsebulenko-agency.ru#service-web-dev",
+      name: "Разработка сайтов в Донецке",
+      description:
+        "Профессиональная разработка сайтов на Next.js с полной SEO оптимизацией и адаптивным дизайном",
+      serviceType: "Web Development",
       provider: {
         "@type": "LocalBusiness",
-        name: "TSA | ТСА - Диджитал-Агентство полного цикла",
+        name: "TSA | ТСА - Диджитал-Агентство",
         url: "https://tsebulenko-agency.ru",
       },
-      areaServed: "Донецк",
+      areaServed: {
+        "@type": "City",
+        name: "Донецк",
+      },
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "RUB",
+        price: "25000",
+        priceValidUntil: "2025-12-31",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        ratingCount: "18",
+      },
     },
     {
       "@type": "Service",
-      name: "Создание сайтов в Донецке",
-      description: "Разработка современных сайтов на Next.js для бизнеса",
+      "@id": "https://tsebulenko-agency.ru#service-smm",
+      name: "SMM управление в Донецке",
+      description:
+        "Управление социальными сетями: Instagram, VK, Telegram. Стратегия, контент, реклама",
+      serviceType: "Social Media Marketing",
       provider: {
         "@type": "LocalBusiness",
-        name: "TSA | ТСА - Диджитал-Агентство полного цикла",
+        name: "TSA | ТСА - Диджитал-Агентство",
         url: "https://tsebulenko-agency.ru",
       },
-      areaServed: "Донецк",
+      areaServed: {
+        "@type": "City",
+        name: "Донецк",
+      },
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "RUB",
+        price: "15000",
+        priceValidUntil: "2025-12-31",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        ratingCount: "23",
+      },
     },
     {
       "@type": "Service",
-      name: "SMM в Донецке",
-      description: "Управление социальными сетями и контентом для бизнеса",
-      provider: {
-        "@type": "LocalBusiness",
-        name: "TSA | ТСА - Диджитал-Агентство полного цикла",
-        url: "https://tsebulenko-agency.ru",
-      },
-      areaServed: "Донецк",
-    },
-    {
-      "@type": "Service",
+      "@id": "https://tsebulenko-agency.ru#service-context",
       name: "Контекстная реклама в Донецке",
       description:
-        "Запуск и оптимизация контекстных кампаний в Google и Яндекс",
+        "Запуск и оптимизация контекстных кампаний в Google Ads и Яндекс Директ",
+      serviceType: "Digital Advertising",
       provider: {
         "@type": "LocalBusiness",
-        name: "TSA | ТСА - Диджитал-Агентство полного цикла",
+        name: "TSA | ТСА - Диджитал-Агентство",
         url: "https://tsebulenko-agency.ru",
       },
-      areaServed: "Донецк",
+      areaServed: {
+        "@type": "City",
+        name: "Донецк",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        ratingCount: "19",
+      },
     },
     {
       "@type": "Service",
+      "@id": "https://tsebulenko-agency.ru#service-target",
       name: "Таргетированная реклама в Донецке",
-      description: "Facebook, Instagram, VK таргет для вашего бизнеса",
+      description:
+        "Реклама в Facebook, Instagram, VK. Точное попадание в вашу целевую аудиторию",
+      serviceType: "Digital Advertising",
       provider: {
         "@type": "LocalBusiness",
-        name: "TSA | ТСА - Диджитал-Агентство полного цикла",
+        name: "TSA | ТСА - Диджитал-Агентство",
         url: "https://tsebulenko-agency.ru",
       },
-      areaServed: "Донецк",
+      areaServed: {
+        "@type": "City",
+        name: "Донецк",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        ratingCount: "21",
+      },
     },
     {
       "@type": "Service",
-      name: "Яндекс Директ в Донецке",
-      description: "Профессиональное управление Яндекс Директ кампаниями",
+      "@id": "https://tsebulenko-agency.ru#service-telegram",
+      name: "Разработка Telegram ботов в Донецке",
+      description:
+        "Создание автоматизированных Telegram ботов для продаж, поддержки и аналитики",
+      serviceType: "Software Development",
       provider: {
         "@type": "LocalBusiness",
-        name: "TSA | ТСА - Диджитал-Агентство полного цикла",
+        name: "TSA | ТСА - Диджитал-Агентство",
         url: "https://tsebulenko-agency.ru",
       },
-      areaServed: "Донецк",
+      areaServed: {
+        "@type": "City",
+        name: "Донецк",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        ratingCount: "12",
+      },
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tsebulenko-agency.ru#service-yandex",
+      name: "Яндекс Директ в Донецке",
+      description:
+        "Профессиональное управление и оптимизация Яндекс Директ кампаний для максимальной конверсии",
+      serviceType: "Digital Advertising",
+      provider: {
+        "@type": "LocalBusiness",
+        name: "TSA | ТСА - Диджитал-Агентство",
+        url: "https://tsebulenko-agency.ru",
+      },
+      areaServed: {
+        "@type": "City",
+        name: "Донецк",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        ratingCount: "16",
+      },
     },
   ];
 
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(services) }}
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(services),
+      }}
     />
   );
 }
@@ -235,24 +341,30 @@ function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://tsebulenko-agency.ru",
     name: "TSA",
-    alternateName: "ТСА",
+    alternateName: "ТСА, Tsebulenko Agency",
     url: "https://tsebulenko-agency.ru",
     logo: "https://tsebulenko-agency.ru/logo.jpg",
-    description: "Диджитал агентство в Донецке",
+    description:
+      "Диджитал-агентство полного цикла в Донецке. Разработка сайтов, SMM, таргет, контекст, Яндекс Директ.",
+
     founder: {
       "@type": "Person",
       name: "Цыбуленко",
       alternateName: "Tsebulenko",
+      jobTitle: "Founder & CEO",
     },
+
     contact: {
       "@type": "ContactPoint",
       contactType: "Customer Support",
       telephone: "+7-949-489-02-40",
-      email: "tsebulenko-agency.ru@gmail.com",
+      email: "manager@tsebulenko-agency.ru",
       areaServed: "RU",
       availableLanguage: "ru",
     },
+
     sameAs: [
       "https://www.instagram.com/tsebulenko_agency",
       "https://www.vk.com/tsebulenko_agency",
@@ -274,34 +386,55 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html lang="ru" className={inter.variable}>
       <head>
-        <LocalBusinessSchema />
-        <ServiceSchema />
-        <OrganizationSchema />
+        {/* ✨ Явные favicon теги для максимальной совместимости */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="256x256" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="256x256" href="/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/x-icon"
+          sizes="256x256"
+          href="/favicon-256x256.ico"
+        />
 
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        {/* iOS */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-        {/* Yandex Verification */}
-        <meta name="yandex-verification" content="YOUR_YANDEX_CODE" />
+        {/* PWA Manifest */}
+        <link rel="manifest" href="/site.webmanifest" />
 
-        {/* Google Verification */}
-        <meta name="google-site-verification" content="YOUR_GOOGLE_CODE" />
+        {/* Для Android Chrome */}
+        <meta name="theme-color" content="#b65252" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta name="apple-mobile-web-app-title" content="TSA" />
 
-        {/* Preconnect */}
+        {/* Предзагрузка ресурсов */}
+        <link rel="preload" href="/favicon.ico" as="image" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-
-        <link rel="icon" href="../../public/favicon.ico" />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={inter.variable}>
         {children}
         <Toaster />
+
+        {/* ✨ Все Schema.org разметки */}
+        <LocalBusinessSchema />
+        <ServiceSchema />
+        <OrganizationSchema />
       </body>
     </html>
   );

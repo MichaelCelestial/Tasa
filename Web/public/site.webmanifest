@@ -1,0 +1,16 @@
+{
+  "name": "TSA | Диджитал Агентство Донецк",
+  "short_name": "TSA",
+  "description": "Разработка сайтов, SMM, таргет, контекст, Яндекс Директ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#b65252",
+  "icons": [
+    {
+      "src": "/favicon-256x256.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}

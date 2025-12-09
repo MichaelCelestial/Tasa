@@ -74,7 +74,7 @@ export function Footer() {
               data-testid="link-footer-logo"
             >
               <img
-                src="/logo.jpg"
+                src="/apple-touch-icon.jpg"
                 alt="Tsebulenko Agency Logo"
                 className="h-10 w-10 object-contain rounded-lg"
               />

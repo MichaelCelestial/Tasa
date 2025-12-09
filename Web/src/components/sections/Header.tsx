@@ -56,7 +56,7 @@ export function Header() {
               data-testid="link-logo"
             >
               <img
-                src="/logo.jpg"
+                src="/apple-touch-icon.jpg"
                 alt="Tsebulenko Agency Logo"
                 className="h-10 w-10 object-contain rounded-lg"
               />
