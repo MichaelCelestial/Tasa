@@ -77,12 +77,12 @@ export const metadata: Metadata = {
       "Разработка сайтов, SMM, таргет, контекст. Реальные результаты: +300% трафика",
     images: [
       {
-        url: "https://tsebulenko-agency.ru/og-main.jpg",
+        url: "https://tsebulenko-agency.ru/apple-touch-icon.jpg",
         width: 1200,
         height: 630,
         alt: "TSA - Диджитал Агентство Донецк",
         type: "image/jpeg",
-        secureUrl: "https://tsebulenko-agency.ru/og-main.jpg",
+        secureUrl: "https://tsebulenko-agency.ru/apple-touch-icon.jpg",
       },
     ],
   },
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TSA | Диджитал Агентство",
     description: "Полный цикл digital услуг в Донецке",
-    images: ["https://tsebulenko-agency.ru/og-main.jpg"],
+    images: ["https://tsebulenko-agency.ru/apple-touch-icon.jpg"],
   },
 };
 
@@ -102,8 +102,8 @@ function LocalBusinessSchema() {
     "@id": "https://tsebulenko-agency.ru",
     name: "TSA | ТСА - Диджитал-Агентство Донецк",
     alternateName: "Tsebulenko Agency",
-    image: "https://tsebulenko-agency.ru/logo.jpg",
-    logo: "https://tsebulenko-agency.ru/logo.jpg",
+    image: "https://tsebulenko-agency.ru/apple-touch-icon.jpg",
+    logo: "https://tsebulenko-agency.ru/apple-touch-icon.jpg",
     description:
       "Комплексные диджитал решения для продвижения бизнеса. Разработка сайтов, SMM, таргет, контекст, Яндекс Директ.",
 
@@ -345,7 +345,7 @@ function OrganizationSchema() {
     name: "TSA",
     alternateName: "ТСА, Tsebulenko Agency",
     url: "https://tsebulenko-agency.ru",
-    logo: "https://tsebulenko-agency.ru/logo.jpg",
+    logo: "https://tsebulenko-agency.ru/apple-touch-icon.jpg",
     description:
       "Диджитал-агентство полного цикла в Донецке. Разработка сайтов, SMM, таргет, контекст, Яндекс Директ.",
 
