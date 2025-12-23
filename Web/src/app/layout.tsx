@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     locale: "ru_RU",
     url: "https://tsebulenko-agency.ru",
     siteName: "TSA",
-    title: "TSA | Диджитал Агентство Донецк",
+    title: "Tsebulenko Agency | Диджитал Агентство Донецк",
     description:
       "Разработка сайтов, SMM, таргет, контекст. Реальные результаты: +170% трафика",
     images: [
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "TSA | Диджитал Агентство",
+    title: "Tsebulenko Agency | Диджитал Агентство",
     description: "Полный цикл digital услуг в Донецке",
     images: ["https://tsebulenko-agency.ru/og-image.png"], // ← ОДНО ИЗОБРАЖЕНИЕ
   },
