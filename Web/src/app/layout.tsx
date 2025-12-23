@@ -74,15 +74,15 @@ export const metadata: Metadata = {
     siteName: "TSA",
     title: "TSA | Диджитал Агентство Донецк",
     description:
-      "Разработка сайтов, SMM, таргет, контекст. Реальные результаты: +300% трафика",
+      "Разработка сайтов, SMM, таргет, контекст. Реальные результаты: +170% трафика",
     images: [
       {
-        url: "https://tsebulenko-agency.ru/apple-touch-icon.jpg",
+        url: "https://tsebulenko-agency.ru/og-image.png", 
         width: 1200,
         height: 630,
         alt: "TSA - Диджитал Агентство Донецк",
         type: "image/jpeg",
-        secureUrl: "https://tsebulenko-agency.ru/apple-touch-icon.jpg",
+        secureUrl: "https://tsebulenko-agency.ru/og-image.png",
       },
     ],
   },

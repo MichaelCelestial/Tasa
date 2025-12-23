@@ -20,7 +20,7 @@ const projects = [
   {
     id: 2,
     title: "Blog ANT-Logistics",
-    category: "Онлайн-Блог",
+    category: "Онлайн-Блог для компании в сфере логистики",
     description:
       "Онлайн-блог для логистической компании с SEO и постоянной поддержкой",
     results: "Обеспечили заботу о клиентах компании",
@@ -30,13 +30,13 @@ const projects = [
   },
   {
     id: 3,
-    title: "DogiDog",
-    category: "Крипто-Игра в Telegram",
+    title: "OZ-works",
+    category: "Онлайн-магазин кухонь под ключ",
     description:
-      "Крипто-игра прямо в Telegram с интеграцией NFT (было разработано совместно с партнером)",
-    results: "10000+ игроков",
-    services: ["Бот", "Игра", "NFT", "Поддержка"],
-    link: "https://t.me/DogiDogTap_bot",
+      " Полная разработка, дизайн сайта и SEO (было разработано совместно с партнером)",
+    results: "1000+ лидов",
+    services: ["Сайт", "Лендинг", "SEO", "Поддержка"],
+    link: "https://oz-works.moderno-agency.com.ua/",
     gradient: "from-amber-600 to-orange-600",
   },
   {
