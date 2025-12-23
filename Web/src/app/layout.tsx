@@ -77,11 +77,11 @@ export const metadata: Metadata = {
       "Разработка сайтов, SMM, таргет, контекст. Реальные результаты: +170% трафика",
     images: [
       {
-        url: "https://tsebulenko-agency.ru/og-image.png", 
+        url: "https://tsebulenko-agency.ru/og-image.png",
         width: 1200,
         height: 630,
         alt: "TSA - Диджитал Агентство Донецк",
-        type: "image/jpeg",
+        type: "image/png",
         secureUrl: "https://tsebulenko-agency.ru/og-image.png",
       },
     ],
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TSA | Диджитал Агентство",
     description: "Полный цикл digital услуг в Донецке",
-    images: ["https://tsebulenko-agency.ru/apple-touch-icon.jpg"],
+    images: ["https://tsebulenko-agency.ru/og-image.png"], // ← ОДНО ИЗОБРАЖЕНИЕ
   },
 };
 
